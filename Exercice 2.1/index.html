@@ -13,16 +13,17 @@
     var ctx = c.getContext("2d");
     ctx.lineWidth = 5;
     ctx.beginPath();
-    ctx.arc(85,100,40,0,Math.PI,true);
+    // glace
+    ctx.arc(85,100,40,0,Math.PI,true); //courbe pour la glace
     ctx.strokeStyle = '#8a0908';
     ctx.fillStyle = "#8a0908";
     ctx.fill();
     ctx.stroke();
     //cornet de glace
     ctx.beginPath();
-    ctx.moveTo(40,100);    // Le tracé part du point 100,100
-    ctx.lineTo(130,100);  // Un segment est ajouté vers 200,200
-    ctx.lineTo(100,200);   // Puis on trace jusqu'à 0,200
+    ctx.moveTo(40,100);    // point de départ du tracé
+    ctx.lineTo(130,100);  // segment
+    ctx.lineTo(100,200);
     ctx.closePath();
     ctx.fillStyle = '#d7823e';
     ctx.fill();
