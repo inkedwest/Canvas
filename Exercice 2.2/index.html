@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CANVAS - Exercice 2.2</title>
+  </head>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style media="screen">
+  html, body { height: 100%; width: 100%; background-color: dimgrey; text-align: center;}
+  #ovni { border: 25px solid white; margin: 15%; background-color: blue;}
+  </style>
+  <body>
+    <canvas id="ovni" width="400px" height="400px"></canvas>
+    <script>
+    var c = document.getElementById('ovni');
+    var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.fillStyle='white';
+      ctx.moveTo(155,100);
+      ctx.quadraticCurveTo(200,15,250,105);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.fillStyle='lightgrey';
+      ctx.moveTo(25,150);
+      ctx.quadraticCurveTo(200,42,375,150);
+      ctx.quadraticCurveTo(200,242,25,150);
+      ctx.fill();
+    </script>
+  </body>
+</html>
