@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CANVAS - Exercice 2.1</title>
+  </head>
+  <style media="screen">
+  </style>
+  <body>
+    <canvas id="icecream" width="400px" height="400px"></canvas>
+    <script>
+    var c = document.getElementById('icecream');
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    ctx.arc(85,100,40,0,Math.PI,true);
+    ctx.strokeStyle = '#8a0908';
+    ctx.fillStyle = "#8a0908";
+    ctx.fill();
+    ctx.stroke();
+    //cornet de glace
+    ctx.beginPath();
+    ctx.moveTo(40,100);    // Le tracé part du point 100,100
+    ctx.lineTo(130,100);  // Un segment est ajouté vers 200,200
+    ctx.lineTo(100,200);   // Puis on trace jusqu'à 0,200
+    ctx.closePath();
+    ctx.fillStyle = '#d7823e';
+    ctx.fill();
+    </script>
+  </body>
+</html>
