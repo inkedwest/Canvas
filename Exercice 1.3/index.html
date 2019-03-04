@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>CANVAS - Exercice 2</title>
+</head>
+<style media="screen"></style>
+<body>
+  <canvas id="car" width="400px" height="400px"></canvas>
+  <script>
+    var c = document.getElementById('car');
+    var ctx = c.getContext("2d");
+    // haut voiture
+    ctx.fillStyle ='#00A551';
+    ctx.fillRect(140,100,200,50); // le premier chiffre : décalage horizontal du bloc / le deuxième : décalage vertical / le troisième : largeur du bloc / le quatrième : hauteur du bloc
+    //bas voiture
+    ctx.fillStyle = '#00A551';
+    ctx.fillRect(80,150,400,50); // le premier chiffre : décalage horizontal du bloc / le deuxième : décalage vertical / le troisième : largeur du bloc / le quatrième : hauteur du bloc
+    //roue gauche
+    ctx.beginPath();
+    ctx.arc(120,240,40,40,Math.PI*2,true);
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#CDCDCD";
+    ctx.fill();
+    ctx.stroke();
+    //roue droite
+    ctx.beginPath();
+    ctx.arc(359,240,40,40,Math.PI*2,true);
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#CDCDCD";
+    ctx.fill();
+    ctx.stroke();
+  </script>
+</body>
+</html>

@@ -2,11 +2,10 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Exercice2</title>
+    <title>CANVAS - Exercice 2</title>
   </head>
   <style media="screen">
-  html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: lightgrey; text-align: center;}
-  #house { border: 1px solid black; margin: 15% auto; background-color: white;}
+
   </style>
   <body>
     <canvas id="house" width="400px" height="400px"></canvas>
@@ -23,16 +22,16 @@
     ctx.fill();
     //façade de maison
     ctx.fillStyle ='#A1D8E6';
-    ctx.fillRect(100,150,200,200);
-//Fenêtre maison
+    ctx.fillRect(100,150,200,200); // le premier chiffre : décalage horizontal du bloc / le deuxième : décalage vertical / le troisième : largeur du bloc / le quatrième : hauteur du bloc
+    //Fenêtre maison
     ctx.fillStyle = '#C9C9C9';
-    ctx.fillRect(120,170,50,50);
+    ctx.fillRect(120,170,40,40); // le premier chiffre : décalage horizontal du bloc / le deuxième : décalage vertical / le troisième : largeur du bloc / le quatrième : hauteur du bloc
     //Fenêtre n°2 maison
     ctx.fillStyle = '#c9c9c9';
-    ctx.fillRect(230,170,50,50);
+    ctx.fillRect(240,170,40,40); // le premier chiffre : décalage horizontal du bloc / le deuxième : décalage vertical / le troisième : largeur du bloc / le quatrième : hauteur du bloc
     //Porte Maison
     ctx.fillStyle = '#c9c9c9';
-    ctx.fillRect(175,280,50,70);
+    ctx.fillRect(170,280,60,70); // le premier chiffre : décalage horizontal du bloc / le deuxième : décalage vertical / le troisième : largeur du bloc / le quatrième : hauteur du bloc
     </script>
   </body>
 </html>
