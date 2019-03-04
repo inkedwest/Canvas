@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CANVAS - Exercice 2.3</title>
+  </head>
+  <style media="screen">
+  html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: lightgrey; text-align: center;}
+  #xmasBread { border: 1px solid black; margin: 15% auto; background-color: white;}
+  </style>
+  <body>
+    <canvas id="xmasBread" width="400px" height="400px"></canvas>
+    <script>
+    var c = document.getElementById('xmasBread');
+    var ctx = c.getContext("2d");
+    // Visage
+    ctx.beginPath();
+       ctx.arc(150,50,40,0,Math.PI*2,true);
+       ctx.fillStyle = '#976f0f';
+       ctx.fill();
+       //sourcils gauche et droit
+       ctx.beginPath();
+       ctx.lineWidth="0.8";
+       ctx.strokeStyle="white";
+       ctx.moveTo(125,33);
+       ctx.quadraticCurveTo(135,20,145,33);
+       ctx.moveTo(155,33);
+       ctx.quadraticCurveTo(165,20,175,33);
+       ctx.stroke();
+       //yeux
+       ctx.beginPath();
+       ctx.arc(135,40,8,0,Math.PI*2,true); //oeil gauche
+       ctx.arc(165,40,8,0,Math.PI*2,true); //oeil droit
+       ctx.fillStyle = 'white';
+       ctx.fill();
+       //bouche
+       ctx.beginPath();
+       ctx.lineWidth="1";
+       ctx.strokeStyle="red";
+       ctx.moveTo(130,63); //lèvre sup
+       ctx.quadraticCurveTo(150,70,170,63);
+       ctx.moveTo(130,63); // lèvre inf
+       ctx.quadraticCurveTo(150,80,170,63);
+       ctx.stroke();
+
+       ctx.beginPath();
+       ctx.moveTo(150,75);
+       ctx.lineTo(150,100);
+       ctx.lineTo(250,100);
+       ctx.quadraticCurveTo(275,85,250,75);
+       ctx.lineTo(250,75);
+       ctx.fillStyle='#976f0f';
+       ctx.fill();
+       // corps
+       ctx.beginPath();
+       ctx.moveTo(150,75);
+       ctx.lineTo(50,75);
+       ctx.quadraticCurveTo(25,85,50,100); // bras gauche
+       ctx.lineTo(80,100); //dessous bras gauche
+       ctx.lineTo(110,100); //flanc gauche
+       ctx.lineTo(110,300); //flanc gauche
+       ctx.quadraticCurveTo(125,315,140,300); // jambe gauche
+       ctx.lineTo(140,300);
+       ctx.lineTo(140,250);
+       ctx.quadraticCurveTo(150,230,160,250); // jambre droite
+       ctx.lineTo(160,250);
+       ctx.lineTo(160,300);
+       ctx.quadraticCurveTo(175,315,190,300);
+       ctx.lineTo(190,300); //flanc droit
+       ctx.lineTo(190,100);//flanc droit
+       ctx.lineTo(250,100);//flanc droit
+       ctx.quadraticCurveTo(275,85,250,75);
+       ctx.lineTo(110,75); //bras droit
+       ctx.fillStyle = '#976f0f';
+       ctx.fill();
+       // boutons
+       ctx.beginPath();
+       ctx.arc(150,130,8,0,Math.PI*2,true); //1er bouton
+       ctx.arc(150,160,8,0,Math.PI*2,true); //2eme bouton
+       ctx.fillStyle = 'rgb(122,41,118)';
+       ctx.fill();
+    </script>
+  </body>
+</html>
